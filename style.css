@@ -1,19 +1,94 @@
+* {
+  margin: 0;
+}
 
-h1{
-  font-size: 2.5rem;
-}
-a{
-  font-size: 1.2rem;
-  color: blueviolet; /*Cor do texto do HiperLink neste exemplo.*/
-  text-decoration: none;/*none tira a decoração (sublinhado) do texto do HiperLink. */
-}
+
 
 html,body{
+  --preto: hsl(240, 6%, 13%);
+  --cinza: hsl(240, 9%, 89%);
   height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 body{
+
   display: grid;
   place-items: center; /*Coloca todos os itens de body no centro da pagina.*/
-  background-color:lightpink; /*Cor de fundo da página.*/
+
+}
+main{
+ 
+  background: url(imagens/background.svg);
+  width: 375px;
+  height: 812px;
+}
+.container{
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  
+  color: var(--cinza);
+}
+.avatar{
+  width: 10rem; /*10rem = 160px / 16px da fonte padrão.*/
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+.avatar span{
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img{
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  /*clip-path: polygon(40% 0, 56% 0, 67% 8%, 68% 18%, 61% 25%, 61% 61%, 70% 53%, 85% 53%, 100% 65%, 100% 85%, 85% 100%, 64% 100%, 55% 90%, 44% 90%, 34% 100%, 13% 100%, 0 86%, 0 66%, 13% 53%, 27% 53%, 36% 60%, 36% 25%, 29% 18%, 31% 8%);*/ /*DONG.*/
+}
+
+
+h1{
+  font-size: 1.5rem;
+  margin-top: 1.5rem;/* = 24px/16*/
+}
+a{
+
+  display: flex;
+  justify-content: center;
+  gap:0.75rem; /* = 12px/16 */
+
+
+  font-size: 1rem; /* = 16px/16*/
+   
+  text-decoration: none;/*none tira a decoração (sublinhado) do texto do HiperLink. */
+
+  margin-top: 0.25rem;/* = 4px/16 */
+  color: var(--cinza);/*Cor do texto do HiperLink.*/
+}
+p{
+  margin-top: 2rem;/* = 32px/16 */
+  line-height: 1.5rem;/* = 24px / 16*/
+}
+ul{
+  margin-top: 4rem;/* = 64px/16 */
+  list-style: none;/* tira os pontinhos da lista (bullet list)*/
+
+  padding: 0; 
+  /*deixa centralizado.
+  uma lista ul normalmente tem um paddind de 40 na esquerda, devido ser uma 'bullet list'.
+  */
+
+  display: flex;
+  /*faz com que os elementos da lista fiquem um ao lado do outro (eixo x), ao inves do padrão um abaixo do outro.*/
+
+  gap: 0.5rem;/* = 8px/16 */
+  /*espaço entre os elementos da lista.*/
+
+  justify-content: center;
+  /*o flex alinha no centro.*/
 }
