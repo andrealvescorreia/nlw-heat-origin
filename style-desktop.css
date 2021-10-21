@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+}
+
+
+
+html,body{
+  --preto: hsl(240, 6%, 6%);
+  --cinza: hsl(240, 9%, 89%);
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body{
+  /*background-color: var(--preto);*/
+  display: grid;
+  place-items: center; /*Coloca todos os itens de body no centro da pagina.*/
+
+}
+main{
+ 
+  background: url(imagens/background-desktop.png);
+  width: 1440px;
+  height: 820px;
+}
+.container{
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  
+  color: var(--cinza);
+}
+.avatar{
+  width: 10rem; /*10rem = 160px / 16px da fonte padrão.*/
+  margin: 13.25rem auto 0;
+  position: relative;
+}
+.avatar span{/*selo rocketseat*/
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img{/*foto programador*/
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+
+h1{/*Nome Programador*/
+  font-size: 1.5rem;
+  margin-top: 1.5rem;/* = 24px/16*/
+}
+
+a{/*link github*/
+
+  display: flex;
+  justify-content: center;
+  gap:0.75rem; /* = 12px/16 */
+
+
+  font-size: 1rem; /* = 16px/16*/
+   
+  text-decoration: none;/*none tira a decoração (sublinhado) do texto do HiperLink. */
+
+  margin-top: 0.25rem;/* = 4px/16 */
+  color: var(--cinza);/*Cor do texto do HiperLink.*/
+}
+
+p{/*texto de apresentação do programador*/
+  margin-top: 2rem;/* = 32px/16 */
+  line-height: 1.5rem;/* = 24px / 16*/
+  font-weight: 400;
+}
+
+ul{/*redes sociais*/
+  margin-top: 1rem;
+  list-style: none;/* tira os pontinhos da lista (bullet list)*/
+
+  padding: 0; 
+  /*deixa centralizado.
+  uma lista ul normalmente tem um paddind de 40 na esquerda, devido ser uma 'bullet list'.
+  */
+
+  display: flex;
+  /*faz com que os elementos da lista fiquem um ao lado do outro (eixo x), ao inves do padrão um abaixo do outro.*/
+
+  gap: 0.5rem;/* = 8px/16 */
+  /*espaço entre os elementos da lista.*/
+
+  justify-content: center;
+  /*o flex alinha no centro.*/
+}
