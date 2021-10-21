@@ -8,7 +8,7 @@
 
   <head>
     <!-- uma tag filha html.-->
-    <title>Andre Alves- DoWhile 2021</title>
+    <title id="tituloNomeUsuario">Andre Alves - DoWhile 2021</title>
 
     <link rel="stylesheet" href="style.css" />
 
@@ -36,8 +36,12 @@
 
         </div>
         
-        <h1>Andre Alves</h1>
-        <a href="https://github.com/andrealvescorreia" target = "_blank">   
+        <h1 id="cabecalhoNomeUsuario" >Andre Alves</h1>
+
+        <a 
+        id = "github"
+        href="https://github.com/andrealvescorreia" 
+        target = "_blank">   
           
           <img src="imagens/github-logo.svg" alt="Logo GitHub"/>
 
@@ -48,27 +52,27 @@
           Engatinhando no mundo da programação! Tenho 19 anos, e estou no 4 Período do curso de Computação da UEPB.
         </p>
 
-        <ul>
-          <li>
-            <a href="https://www.youtube.com/c/AndrezitoBuster"     target = "_blank">
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href=""     target = "_blank">
               <img src="imagens/yt-logo.svg" alt="Logo YouTube" >
             </a>
           </li>
 
-          <li>
-            <a href="https://www.instagram.com/correiaandrealves/"  target = "_blank">
+          <li class="instagram">
+            <a href=""  target = "_blank">
               <img src="imagens/ig-logo.svg" alt="Logo Instagram">
             </a>
           </li>
 
-          <li>
-            <a href="https://www.facebook.com/andre.alvescorreia.1" target = "_blank">
+          <li class="facebook">
+            <a href="" target = "_blank">
               <img src="imagens/fb-logo.svg" alt="Logo Facebook">
             </a>
           </li>
 
-          <li>
-            <a href="https://twitter.com/notc_andre"                target = "_blank">
+          <li class="twitter">
+            <a href="https://google.com"                target = "_blank">
               <img src="imagens/tw-logo.svg" alt="Logo Twitter">
             </a>
           </li>
@@ -78,6 +82,45 @@
       </div>
     
     </main>
+
+
+    <script>
+
+      let nomeUsuario = "André Alves Correia"
+
+      const redesSociais = {
+        github: "andrealvescorreia",
+        twitter: "notc_andre",
+        youtube: "AndrezitoBuster",
+        facebook: "andre.alves.correia.1",
+        instagram: "correiaandrealves"
+      }
+
+      function mudarNomeUsuario(){
+        let title = document.getElementById("tituloNomeUsuario")
+        title.textContent = nomeUsuario+" - DoWhile 2021"
+
+        let h1 = document.getElementById("cabecalhoNomeUsuario")
+        h1.textContent = nomeUsuario
+      }
+
+      function mudarLinksRedesSociais(){
+
+        let a = document.getElementById("github");
+        a.href = `https://github.com/${redesSociais["github"]}`
+
+        for(let li of socialLinks.children){
+          const social = li.getAttribute('class')//pega a classe da li ('twitter', 'youtube', etc.)
+
+          //           a.href
+          li.children[0].href = `https://${social}.com/${redesSociais[social]}`
+
+        }
+      }
+      mudarNomeUsuario()
+      mudarLinksRedesSociais()
+
+    </script>
 
   </body>
 
