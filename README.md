@@ -1,5 +1,5 @@
 # nlw-heat-origin
-Exercício feito assitindo as aulas do evento *Next Level Week: Heat*, criado pela *Rocketseat* e que teve início em outubro de 2021.
+Exercício feito assitindo as aulas do evento *Next Level Week: Heat*, criado pela *Rocketseat* e que aconteceu em outubro de 2021.
 * Trilha: Origin.
 * Desafio: Criar um crachá virtual usando HTML, CSS e Javascript.
 ***
