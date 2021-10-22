@@ -32,23 +32,25 @@
             <img src="imagens/selo.svg" alt="Selo Rocketseat"/>
           </span>
 
-          <img src="https://avatars.githubusercontent.com/u/58227057?v=4" alt="Foto"/>
+          <img src="https://betterstudio.com/wp-content/uploads/2019/05/1-1-instagram-1024x1024.jpg" alt="Foto"/
+          id = "fotoUsuario"
+          >
 
         </div>
         
         <h1 id="cabecalhoNomeUsuario" >Andre Alves</h1>
 
         <a 
-        id = "github"
-        href="https://github.com/andrealvescorreia" 
+        id = "linkGithub"
+        href="https://github.com/maybrito" 
         target = "_blank">   
           
           <img src="imagens/github-logo.svg" alt="Logo GitHub"/>
-
-          andrealvescorreia
+          <span id="nicknameGitHub">maykbrito</span>
+          
         </a>
 
-        <p>
+        <p id="bioUsuario">
           Novato na programação! 
           Tenho 19 anos, e estou no 4º Período do curso de 
           Computação da UEPB.
@@ -84,46 +86,10 @@
       </div>
     
     </main>
-
-
-    <script>
-
-      let nomeUsuario = "André Alves Correia"
-
-      const redesSociais = {
-        github: "andrealvescorreia",
-        twitter: "notc_andre",
-        youtube: "AndrezitoBuster",
-        facebook: "andre.alves.correia.1",
-        instagram: "correiaandrealves"
-      }
-
-      function mudarNomeUsuario(){
-        let title = document.getElementById("tituloNomeUsuario")
-        title.textContent = nomeUsuario+" - DoWhile 2021"
-
-        let h1 = document.getElementById("cabecalhoNomeUsuario")
-        h1.textContent = nomeUsuario
-      }
-
-      function mudarLinksRedesSociais(){
-
-        let a = document.getElementById("github");
-        a.href = `https://github.com/${redesSociais["github"]}`
-
-        for(let li of socialLinks.children){
-          const social = li.getAttribute('class')//pega a classe da li ('twitter', 'youtube', etc.)
-
-          //           a.href
-          li.children[0].href = `https://${social}.com/${redesSociais[social]}`
-
-        }
-      }
-      mudarNomeUsuario()
-      mudarLinksRedesSociais()
-
-    </script>
-
+    <!--boa pratica: carregar o javascript do site no final no html, 
+      assim o código que a gente criou no main.js pode acessar os elementos no DOM sem nenhum problema.-->
+    <!--nota: aparentemente tbm existem casos onde carregar o javascript no começo do html é viável.-->
+    <script src="main.js"></script>
   </body>
 
 </html>
