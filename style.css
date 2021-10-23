@@ -20,9 +20,17 @@ body{
 }
 main{
  
-  background: url(imagens/background.svg);
-  width: 375px;
-  height: 812px;
+  background: url(imagens/background.svg) no-repeat center/cover;
+  /*width: 375px;
+  height: 812px;*/
+
+  width: 100vw;/*viewport width*/
+  height: 100vh;/*viewport height*/
+  min-height: 812px;
+
+  /*faz com que o background se adapte a diferentes dispositivos*/
+
+
 }
 .container{
   max-width: 250px;
