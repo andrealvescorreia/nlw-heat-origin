@@ -20,9 +20,11 @@ body{
 }
 main{
  
-  background: url(imagens/background-desktop.png);
-  width: 1440px;
-  height: 820px;
+  background: url(imagens/background-desktop.svg) no-repeat center/cover;
+  /*width: 1440px;*/
+  min-height: 820px;
+  width: 100vw;/*viewport width*/
+  height: 100vh;/*viewport height*/
 }
 .container{
   max-width: 250px;
